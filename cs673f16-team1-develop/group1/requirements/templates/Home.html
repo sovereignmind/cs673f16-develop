@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% extends "TopBarBase.html" %}
+{% block content %}
+<!-- Carousel================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="{{ STATIC_URL }}img/Banner11.png" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>One for Three</h1>
+                    <p>From now on, we give you three magnificiant tools which are the keys of a successful project management with only one time registration.</p>
+                    <p><a class="btn btn-lg btn-primary" href="/signup" role="button">Sign up today</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ STATIC_URL }}img/Banner21.png" alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Connect from Anywhere</h1>
+                    <p>Meeting room is no longer bounded. It can be everywhere, even in your living room or on your bed.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ STATIC_URL }}img/Banner31.png" alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Instant Feedback</h1>
+                    <p>It's no longer a difficult progress. Save your time and cost to get focus back on your projects.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container marketing">
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
+            <a href="/req/projects"><img class="img-circle" src="{{ STATIC_URL }}img/Logo1-Square.png" alt="Generic placeholder image" style="width: 150px; height: 150px;"></a>
+            <h2>RequirementTracker</h2>
+            <p>Comprehensive but not Complecative. We dedicate in simplizing user interface, but still providing magnificiant features to make your project succesful.</p>
+            <p><a class="btn btn-default" href="/req/projects" role="button">Start Using</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="communication/"><img class="img-circle" src="{{ STATIC_URL }}img/CommunicationLogo.jpg" alt="Generic placeholder image" style="width: 150px; height: 150px;"></a>
+            <h2>CommunicationTool</h2>
+            <p>With the help of communication tool, you can send messages, create new rooms for chatting, and search for the information from the past conversation. No matter what projects you have, communication makes the whole project move forward.</p>
+            <p><a class="btn btn-default" href="/communication" role="button">Start Using</a></p>
+        </div>
+        <div class="col-lg-4">
+            <a href="issue_tracker/"><img class="img-circle" src="{{ STATIC_URL }}img/Issue-TrackerLogo.jpg" alt="Issue Tracker Logo" style="width: 150px; height: 150px;"></a>
+            <h2>IssueTracker</h2>
+            <p>Log, Track, Resolve and Ship. Issue Tracker provides a simple interface to help get your app out of crap.</p>
+            <p><a class="btn btn-default" href="/issue_tracker" role="button">Start Using</a></p>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>© 2014 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    {% load staticfiles %}
+    <link href="{{ STATIC_URL }}css/Carousel.css" rel="stylesheet">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#myCarousel").carousel({
+                interval: 5000,
+                pause: "hover",
+                wrap: true
+            });
+        });
+    </script>
+</div>
+{% endblock content %}
